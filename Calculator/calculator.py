@@ -134,7 +134,7 @@ class Calculator(QWidget):
         self.streak = 0
 
     def _operation(self, op):
-        if self.input.text():
+        if self.op == "Null":
             self.num_1 = float(self.input.text())
         self.op = op
         self.input.setText("0")
@@ -167,6 +167,7 @@ class Calculator(QWidget):
                     self.input.setText(str(self.num_1 / self.num_2))
         self.num_1 = float(self.input.text())
         self.streak = 1
+
 
 
 app = QApplication(sys.argv)
